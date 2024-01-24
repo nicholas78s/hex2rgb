@@ -34,9 +34,11 @@ export const Hex2Rgb : FC = () => {
   backgroundColor = (hex) ? hex : backgroundColor;
 
   return (
-    <div className="container" style={{backgroundColor: backgroundColor}}>
-      <input type="text" id="hex" name="hex" maxLength={7} onChange={handleChange} />
-      <input type="text" id="rgb" name="rgb" readOnly value={rgb} />
-    </div>
+    <form>
+      <div className="container" style={{backgroundColor: backgroundColor}}>
+        <input type="text" id="hex" name="hex" maxLength={7} onChange={handleChange} />
+        <input type="text" id="rgb" name="rgb" readOnly value={rgb} />
+      </div>
+    </form>
   );
 }
